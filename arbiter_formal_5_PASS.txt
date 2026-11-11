@@ -1,0 +1,77 @@
+SBY 13:45:59 [arbiter_formal_5] Removing directory '/home/chirashmi/formal_test/arbiter_formal_5'.
+SBY 13:45:59 [arbiter_formal_5] Copy '/home/chirashmi/formal_test/arbiter.sv' to '/home/chirashmi/formal_test/arbiter_formal_5/src/arbiter.sv'.
+SBY 13:45:59 [arbiter_formal_5] Copy '/home/chirashmi/formal_test/arbiter_formal_5.sv' to '/home/chirashmi/formal_test/arbiter_formal_5/src/arbiter_formal_5.sv'.
+SBY 13:45:59 [arbiter_formal_5] engine_0: smtbmc z3
+SBY 13:45:59 [arbiter_formal_5] base: starting process "cd arbiter_formal_5/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 13:45:59 [arbiter_formal_5] base: Warning: Wire arbiter_formal.\clk is used but has no driver.
+SBY 13:45:59 [arbiter_formal_5] base: finished (returncode=0)
+SBY 13:45:59 [arbiter_formal_5] prep: starting process "cd arbiter_formal_5/model; yosys -ql design_prep.log design_prep.ys"
+SBY 13:46:00 [arbiter_formal_5] prep: Warning: Wire arbiter_formal.\clk is used but has no driver.
+SBY 13:46:00 [arbiter_formal_5] prep: finished (returncode=0)
+SBY 13:46:00 [arbiter_formal_5] smt2: starting process "cd arbiter_formal_5/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 13:46:00 [arbiter_formal_5] smt2: finished (returncode=0)
+SBY 13:46:00 [arbiter_formal_5] engine_0.basecase: starting process "cd arbiter_formal_5; yosys-smtbmc -s z3 --presat --noprogress -t 20  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 13:46:00 [arbiter_formal_5] engine_0.induction: starting process "cd arbiter_formal_5; yosys-smtbmc -s z3 --presat -i --noprogress -t 20  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2"
+SBY 13:46:00 [arbiter_formal_5] engine_0.basecase: ##   0:00:00  Solver: z3
+SBY 13:46:00 [arbiter_formal_5] engine_0.induction: ##   0:00:00  Solver: z3
+SBY 13:51:34 [arbiter_formal_5] engine_0.induction: ##   0:05:33  Trying induction in step 20..
+SBY 13:52:11 [arbiter_formal_5] engine_0.basecase: ##   0:06:11  Checking assumptions in step 0..
+SBY 13:52:39 [arbiter_formal_5] engine_0.induction: ##   0:06:39  waiting for solver (1 minute)
+SBY 13:53:17 [arbiter_formal_5] engine_0.basecase: ##   0:07:17  waiting for solver (1 minute)
+SBY 13:56:02 [arbiter_formal_5] engine_0.basecase: ##   0:10:02  Checking assertions in step 0..
+SBY 13:56:02 [arbiter_formal_5] engine_0.basecase: ##   0:10:02  Checking assumptions in step 1..
+SBY 13:56:03 [arbiter_formal_5] engine_0.basecase: ##   0:10:03  Checking assertions in step 1..
+SBY 13:56:03 [arbiter_formal_5] engine_0.basecase: ##   0:10:03  Checking assumptions in step 2..
+SBY 13:56:04 [arbiter_formal_5] engine_0.basecase: ##   0:10:04  Checking assertions in step 2..
+SBY 13:56:04 [arbiter_formal_5] engine_0.basecase: ##   0:10:04  Checking assumptions in step 3..
+SBY 13:56:06 [arbiter_formal_5] engine_0.basecase: ##   0:10:06  Checking assertions in step 3..
+SBY 13:56:06 [arbiter_formal_5] engine_0.basecase: ##   0:10:06  Checking assumptions in step 4..
+SBY 13:56:07 [arbiter_formal_5] engine_0.basecase: ##   0:10:07  Checking assertions in step 4..
+SBY 13:56:08 [arbiter_formal_5] engine_0.basecase: ##   0:10:08  Checking assumptions in step 5..
+SBY 13:56:10 [arbiter_formal_5] engine_0.basecase: ##   0:10:10  Checking assertions in step 5..
+SBY 13:57:00 [arbiter_formal_5] engine_0.basecase: ##   0:11:00  Checking assumptions in step 6..
+SBY 13:57:00 [arbiter_formal_5] engine_0.induction: ##   0:11:00  waiting for solver (5 minutes)
+SBY 13:57:02 [arbiter_formal_5] engine_0.basecase: ##   0:11:02  Checking assertions in step 6..
+SBY 13:57:06 [arbiter_formal_5] engine_0.basecase: ##   0:11:06  Checking assumptions in step 7..
+SBY 13:57:11 [arbiter_formal_5] engine_0.basecase: ##   0:11:11  Checking assertions in step 7..
+SBY 13:57:15 [arbiter_formal_5] engine_0.basecase: ##   0:11:15  Checking assumptions in step 8..
+SBY 13:57:18 [arbiter_formal_5] engine_0.basecase: ##   0:11:18  Checking assertions in step 8..
+SBY 13:57:23 [arbiter_formal_5] engine_0.basecase: ##   0:11:23  Checking assumptions in step 9..
+SBY 13:57:26 [arbiter_formal_5] engine_0.basecase: ##   0:11:26  Checking assertions in step 9..
+SBY 13:57:28 [arbiter_formal_5] engine_0.basecase: ##   0:11:28  Checking assumptions in step 10..
+SBY 13:57:31 [arbiter_formal_5] engine_0.basecase: ##   0:11:31  Checking assertions in step 10..
+SBY 13:57:39 [arbiter_formal_5] engine_0.basecase: ##   0:11:39  Checking assumptions in step 11..
+SBY 13:57:41 [arbiter_formal_5] engine_0.basecase: ##   0:11:41  Checking assertions in step 11..
+SBY 13:57:44 [arbiter_formal_5] engine_0.basecase: ##   0:11:44  Checking assumptions in step 12..
+SBY 13:57:46 [arbiter_formal_5] engine_0.basecase: ##   0:11:46  Checking assertions in step 12..
+SBY 13:57:48 [arbiter_formal_5] engine_0.basecase: ##   0:11:48  Checking assumptions in step 13..
+SBY 13:57:50 [arbiter_formal_5] engine_0.basecase: ##   0:11:50  Checking assertions in step 13..
+SBY 13:57:52 [arbiter_formal_5] engine_0.basecase: ##   0:11:52  Checking assumptions in step 14..
+SBY 13:57:54 [arbiter_formal_5] engine_0.basecase: ##   0:11:54  Checking assertions in step 14..
+SBY 13:57:56 [arbiter_formal_5] engine_0.basecase: ##   0:11:56  Checking assumptions in step 15..
+SBY 13:57:58 [arbiter_formal_5] engine_0.basecase: ##   0:11:58  Checking assertions in step 15..
+SBY 13:58:01 [arbiter_formal_5] engine_0.basecase: ##   0:12:01  Checking assumptions in step 16..
+SBY 13:58:03 [arbiter_formal_5] engine_0.basecase: ##   0:12:03  Checking assertions in step 16..
+SBY 13:58:06 [arbiter_formal_5] engine_0.basecase: ##   0:12:06  Checking assumptions in step 17..
+SBY 13:58:08 [arbiter_formal_5] engine_0.basecase: ##   0:12:08  Checking assertions in step 17..
+SBY 13:58:14 [arbiter_formal_5] engine_0.basecase: ##   0:12:13  Checking assumptions in step 18..
+SBY 13:58:16 [arbiter_formal_5] engine_0.basecase: ##   0:12:16  Checking assertions in step 18..
+SBY 13:58:19 [arbiter_formal_5] engine_0.basecase: ##   0:12:19  Checking assumptions in step 19..
+SBY 13:58:22 [arbiter_formal_5] engine_0.basecase: ##   0:12:22  Checking assertions in step 19..
+SBY 13:59:36 [arbiter_formal_5] engine_0.induction: ##   0:13:35  Trying induction in step 19..
+SBY 13:59:37 [arbiter_formal_5] engine_0.induction: ##   0:13:37  Trying induction in step 18..
+SBY 13:59:37 [arbiter_formal_5] engine_0.induction: ##   0:13:37  Trying induction in step 17..
+SBY 13:59:39 [arbiter_formal_5] engine_0.induction: ##   0:13:39  Temporal induction successful.
+SBY 14:02:22 [arbiter_formal_5] engine_0.induction: ##   0:16:22  Status: passed
+SBY 14:02:22 [arbiter_formal_5] engine_0.induction: finished (returncode=0)
+SBY 14:02:22 [arbiter_formal_5] engine_0.induction: Status returned by engine for induction: pass
+SBY 14:03:10 [arbiter_formal_5] engine_0.basecase: ##   0:17:10  Status: passed
+SBY 14:03:10 [arbiter_formal_5] engine_0.basecase: finished (returncode=0)
+SBY 14:03:10 [arbiter_formal_5] engine_0.basecase: Status returned by engine for basecase: pass
+SBY 14:03:10 [arbiter_formal_5] summary: Elapsed clock time [H:MM:SS (secs)]: 0:15:44 (944)
+SBY 14:03:10 [arbiter_formal_5] summary: Elapsed process time [H:MM:SS (secs)]: 0:12:50 (770)
+SBY 14:03:10 [arbiter_formal_5] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY 14:03:10 [arbiter_formal_5] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY 14:03:10 [arbiter_formal_5] summary: engine_0 did not produce any traces
+SBY 14:03:10 [arbiter_formal_5] summary: successful proof by k-induction.
+SBY 14:03:10 [arbiter_formal_5] DONE (PASS, rc=0)

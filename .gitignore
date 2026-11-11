@@ -1,0 +1,11 @@
+# SymbiYosys generated work directories
+arbiter_formal*/
+smoke/
+
+# Generated formal traces
+*.vcd
+*.smtc
+*.yw
+
+# Temporary files
+*.tmp
